@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_details_activity.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\details_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_real_time_recognition.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_real_time_recognition.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings_eigen.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_settings_eigen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings_fisher.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_settings_fisher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_setting_main1.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_setting_main1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_recognition.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_recognition.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_details.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_grid_color_selector.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable\\grid_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings_lbp.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_settings_lbp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_aboutc.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_aboutc.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera.png.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable\\camera.png"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_database.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_database.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_grid_item_layout.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\grid_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_save_for_alignment.xml.flat",
+        "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\layout\\activity_save_for_alignment.xml"
+    }
+]

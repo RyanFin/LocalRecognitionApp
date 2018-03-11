@@ -85,7 +85,10 @@ public class DetailsActivity extends Activity {
 			croppedView.setImageBitmap(bitmap);
 
 			AsyncTaskRunner runner1 = new AsyncTaskRunner(this);
-			runner1.execute("Display");
+			for(int i = 0; i < 100; i++){
+				runner1.execute("Display");
+			}
+
 
 
 		}catch(Exception e)

@@ -431,13 +431,13 @@ class Preview extends SurfaceView implements SurfaceHolder.Callback {
         // Now that the size is known, set up the camera parameters and begin
         // the preview.
         Camera.Parameters parameters = mCamera.getParameters();
+        parameters.setPreviewSize(w, h);
 
-        List<Size> sizes = parameters.getSupportedPreviewSizes();
-        Size optimalSize = getOptimalPreviewSize(sizes, w, h);
+        List<Camera.Size> sizes = parameters.getSupportedPreviewSizes();
+        Log.d("SIZES", "surfaceChanged: " + sizes);
+        Camera.Size optimalSize =  sizes.get(0);
 
-       // parameters.setPreviewSize(optimalSize.width, optimalSize.height);
-
-        parameters.setPreviewSize(optimalSize.height, optimalSize.width);
+        parameters.setPreviewSize(optimalSize.width, optimalSize.height);
         mCamera.setDisplayOrientation(90);	// new code
 
         mCamera.setParameters(parameters);
