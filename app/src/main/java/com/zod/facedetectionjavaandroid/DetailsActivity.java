@@ -58,7 +58,7 @@ public class DetailsActivity extends Activity {
 
 	 public static String title;
 	 public static ImageView imageView;
-	public static ImageView croppedView;
+	 public static ImageView croppedView;
 
 
 
@@ -85,8 +85,11 @@ public class DetailsActivity extends Activity {
 			croppedView.setImageBitmap(bitmap);
 
 			AsyncTaskRunner runner1 = new AsyncTaskRunner(this);
+			runner1.execute("Display");
 
-				runner1.execute("Display");
+//				for(int i =0; i < 100; i++) {
+//					new AsyncTaskRunner(this).execute("Display");
+//				}
 
 
 
@@ -139,6 +142,8 @@ public class DetailsActivity extends Activity {
 		
 		@Override
 		protected String doInBackground(String... params) {
+
+
 			publishProgress("Sending...");
 			String msg = params[0];
 			try
@@ -149,12 +154,12 @@ public class DetailsActivity extends Activity {
 
 				File classifierFile = new File(context.getCacheDir(),
 						"haarcascade_eye.xml");
-				
+
 				if (classifierFile == null || classifierFile.length() <= 0) {
 					throw new IOException(
 							"Could not extract the classifier file from Java resource.");
 				}
-				
+
 		        // Preload the opencv_objdetect module to work around a known bug.
 		        Loader.load(opencv_objdetect.class);
 		        classifier = new CvHaarClassifierCascade(cvLoad(classifierFile.getAbsolutePath()));
@@ -163,30 +168,25 @@ public class DetailsActivity extends Activity {
 		            throw new IOException("Could not load the classifier file.");
 		        }
 		        storage = CvMemStorage.create();
-		        
+
 		        Log.d("Classifier Status", "Classifier found and successfully loaded.");
 				System.out.println("zod123 changing the value");
-				
+
 				//TODO load the image from memory and then apply the classifier on it
 				File bitmapFile = new File(context.getFilesDir(), title);
 				FileInputStream fis = new FileInputStream(bitmapFile);
 				Mat img = readInputStreamIntoMat(fis);
 
-
-
-
-
-
 				cvClearMemStorage(storage);
 				faces = cvHaarDetectObjects(img.asIplImage(), classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
-				
+
 				System.out.println("zod123 it worked " + faces.total());
 				int total = faces.total();
 				 for (int i = 0; i < total; i++)
 		          {
-					 CvRect r = new CvRect(cvGetSeqElem(faces, i));   
-					 
-					 
+					 CvRect r = new CvRect(cvGetSeqElem(faces, i));
+
+
 					 if(x==0){
 						 x = r.x() ;
 						 y = r.y();
@@ -202,20 +202,14 @@ public class DetailsActivity extends Activity {
 						 x2Center = (x2 + (x2+w2))/2;
 						 y2Center = (y2 + (y2+h2))/2;
 					 }
-		             
+
 		             System.out.println("zod123 number " + (i+1) + " - x = " + x + " y = " + y );
-		             
-		             
+
+
 		             Bitmap temPbit = BitmapFactory.decodeFile(new File(context.getFilesDir(),title).getAbsolutePath());
 					 bit = temPbit.copy(Bitmap.Config.ARGB_8888, true);
 
-				    
-				     	     
-				     
 		          }
-
-
-
 
 
 				//6/10 new stuff experimental ---------------------
@@ -278,11 +272,11 @@ public class DetailsActivity extends Activity {
 
 				//--------experimental code 9/10
 
-				
+
 			}
 			catch(Exception e)
 			{
-				
+
 			}
 			resp = "Message has been sent.";
 			return resp;
