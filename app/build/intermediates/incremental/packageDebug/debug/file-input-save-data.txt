@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Mar 11 11:15:26 GMT 2018
+#Sun Mar 11 12:03:35 GMT 2018
 60.set=NATIVE_RESOURCE
 52.set=ASSET
 53.base=C\:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
