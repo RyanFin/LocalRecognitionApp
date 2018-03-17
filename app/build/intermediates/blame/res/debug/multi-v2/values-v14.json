@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "outputFile": "C:\\Users\\user\\Documents\\GitHub\\LocalRecognitionApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ryan.F\\Documents\\GitHub\\OpenCV-Face-Recognition-Android\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "source": "C:\\Users\\user\\Documents\\GitHub\\LocalRecognitionApp\\app\\src\\main\\res\\values-v14\\styles.xml",
                     "from": {
                         "startLines": "7",
                         "startColumns": "4",

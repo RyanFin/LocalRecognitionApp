@@ -12,6 +12,7 @@ import static org.bytedeco.javacpp.opencv_core.cvRect;
 import static org.bytedeco.javacpp.opencv_core.cvSetImageROI;
 import static org.bytedeco.javacpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -63,6 +64,8 @@ public class DetailsActivity extends Activity {
 
 
 
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		try{
@@ -84,14 +87,12 @@ public class DetailsActivity extends Activity {
 			croppedView = (ImageView) findViewById(R.id.croppedImage);
 			croppedView.setImageBitmap(bitmap);
 
-			AsyncTaskRunner runner1 = new AsyncTaskRunner(this);
-			runner1.execute("Display");
+//			AsyncTaskRunner runner1 = new AsyncTaskRunner(this);
+//			runner1.execute("Display");
 
-//				for(int i =0; i < 100; i++) {
-//					new AsyncTaskRunner(this).execute("Display");
-//				}
-
-
+				for(int i =0; i < 100; i++) {
+					new AsyncTaskRunner(this).execute("Display");
+				}
 
 
 		}catch(Exception e)
@@ -112,6 +113,7 @@ public class DetailsActivity extends Activity {
 	    private CvSeq faces;
 	    private Bitmap bit;
 		private Bitmap croppedBit;
+		private Bitmap decoded;
 	    private Canvas c;
 		private Canvas c1;
 		public boolean hasRotated = false;
@@ -295,10 +297,18 @@ public class DetailsActivity extends Activity {
 			try{
 				if(hasRotated == false) {
 					croppedBit = bit.copy(bit.getConfig(), true);
+					ByteArrayOutputStream out = new ByteArrayOutputStream();
+					croppedBit.compress(Bitmap.CompressFormat.PNG,100,out);
+					decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(out.toByteArray()));
+					Log.e("Original   dimensions", croppedBit.getWidth()+" "+croppedBit.getHeight());
+					Log.e("Compressed dimensions", decoded.getWidth()+" "+decoded.getHeight());
 				}else{
 					try {
 						Bitmap temPbit = BitmapFactory.decodeFile(new File(context.getFilesDir(), "3-temp_3.png").getAbsolutePath());
 						croppedBit = temPbit.copy(Bitmap.Config.ARGB_8888, true);
+						ByteArrayOutputStream out = new ByteArrayOutputStream();
+						croppedBit.compress(Bitmap.CompressFormat.PNG,100,out);
+						decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(out.toByteArray()));
 					}catch(Exception e)
 					{
 						System.out.println("zodLog " + e.getMessage());
@@ -338,7 +348,7 @@ public class DetailsActivity extends Activity {
 				p1.setColor(Color.WHITE);
 				p1.setStrokeWidth(-1);
 				p1.setStyle(Paint.Style.STROKE);
-				c1 = new Canvas(croppedBit);
+				c1 = new Canvas(decoded);
 
 				//TODO later do a if block that checks y and y2 to see if they are
 				//different then takes measures accordingly
@@ -360,7 +370,7 @@ public class DetailsActivity extends Activity {
 					c1.drawLine(rightcounter, 0, rightcounter, 190, p1);
 				}
 
-				DetailsActivity.croppedView.setImageBitmap(croppedBit);
+				DetailsActivity.croppedView.setImageBitmap(decoded);
 				DetailsActivity.croppedView.draw(c1);
 
 
