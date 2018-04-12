@@ -1,5 +1,9 @@
 package com.zod.facedetectionjavaandroid;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import android.app.Activity;
@@ -8,6 +12,8 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -18,6 +24,9 @@ public class Database extends Activity {
 	
 	private GridView gridView;
     private GridViewAdapter gridAdapter;
+	private FileOutputStream out = null;
+	private String extStorageDirectory = Environment.getExternalStorageDirectory().toString();
+
 
 
 	@Override
@@ -92,6 +101,28 @@ public class Database extends Activity {
 	        {
 	        	if(filesList[i].endsWith(".png")){	//new code
 		        	Bitmap bitmap = BitmapFactory.decodeStream(this.openFileInput(filesList[i]));
+					Log.d("MYTEST", "Database:" + Database.this.getFilesDir().getAbsolutePath());
+					Log.d("MYTEST", "Bitmap: " + bitmap.toString());
+					OutputStream outputStream = null;
+					File file = new File(extStorageDirectory,"file:" + i +".png");
+					Log.d("MYTEST", "saveData: " + Environment.getExternalStorageDirectory().toString());
+					try {
+						outputStream = new FileOutputStream(file);
+						bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream); // bmp is your Bitmap instance
+						// PNG is a lossless format, the compression factor (100) is ignored
+						outputStream.flush();
+						outputStream.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						try {
+							if (out != null) {
+								out.close();
+							}
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
 					imageItems.add(new ImageItem(bitmap, filesList[i]));
 	        	}
 	        }

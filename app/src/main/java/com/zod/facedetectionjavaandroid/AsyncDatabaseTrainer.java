@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 public class AsyncDatabaseTrainer extends AsyncTask<String, String, String> {
 	
@@ -64,9 +65,13 @@ public class AsyncDatabaseTrainer extends AsyncTask<String, String, String> {
 			//assetFiles = am.list("images");						//files names use as labels later on
 			ArrayList<String> temp = new ArrayList<String>();
 			String [] tempFiles = context.getFilesDir().list();
+
+
+
 			for(int a = 0 ; a<= (tempFiles.length-1); a++)
 			{
 				if(tempFiles[a].endsWith("png")){
+					Log.d("MYTEST", tempFiles[a]);
 					temp.add(tempFiles[a]);
 				}
 			}
